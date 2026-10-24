@@ -1,0 +1,45 @@
+{
+  "name": "splash-arena",
+  "version": "0.1.0",
+  "private": true,
+  "description": "泼色竞技场：局域网实时联机团队涂地对战（浏览器游戏）",
+  "author": "Yuki Li",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogeheng/local-splatoon.git"
+  },
+  "homepage": "https://github.com/dogeheng/local-splatoon#readme",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx server/index.ts --dev",
+    "build": "vite build",
+    "start": "vite build && tsx server/index.ts",
+    "serve": "tsx server/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "release": "node scripts/release.mjs",
+    "e2e": "node scripts/e2e/flow.mjs"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4",
+    "three": "^0.181.2",
+    "tsx": "^4.23.15",
+    "ws": "^8.22.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/qrcode": "^1.5.6",
+    "@types/three": "^0.181.0",
+    "@types/ws": "^8.18.2",
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.64.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7",
+    "vitest": "^3.2.7"
+  }
+}
